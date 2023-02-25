@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Marketplace</string>
+    <string name="login">LOGIN</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="loginbutton">LOGIN</string>
+    <string name="rekomendasi">Rekomendasi</string>
+    <string name="txt_recommend">Lihat Barang Rekomendasi Dari Kami!</string>
+    <string name="breakss">end.</string>
+</resources>

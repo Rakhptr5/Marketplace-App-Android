@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MoveActivityWithData"
+    tools:ignore="SpeakableTextPresentCheck">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:src="@drawable/ses"
+            android:layout_centerHorizontal="true"
+
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="360dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/aaaas" />
+
+        <ImageView
+           android:id="@+id/atta"
+            android:layout_width="400dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/asesss"
+            android:layout_centerHorizontal="true"
+           />
+
+
+        <EditText
+            android:layout_width="225dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/custom"
+            android:padding="8dp"
+            android:inputType="text"
+            android:hint="Tas Murah Gucci"
+            android:textColorHint="@color/adus"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/yud"
+            android:textSize="18sp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="316dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:src="@drawable/baseline_shopping_cart_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="286dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:src="@drawable/baseline_message_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:src="@drawable/baseline_notifications_active_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <View
+           android:id="@+id/garis"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray"
+            android:layout_marginTop="225dp"
+            />
+        <TextView
+            android:id="@+id/txt_popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="19dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/rekomendasi"
+            android:textSize="23sp"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/semi"
+            android:layout_below="@+id/garis"/>
+        <TextView
+            android:id="@+id/txt_disc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="19dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/txt_recommend"
+            android:textSize="14sp"
+            android:fontFamily="@font/reg"
+            android:textColor="@color/gray"
+            android:layout_below="@+id/txt_popular"/>
+
+        <ImageButton
+            android:id="@+id/btn_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/atta"
+            android:layout_marginLeft="170dp"
+            android:layout_toEndOf="@id/txt_popular"
+            android:background="@null"
+            android:src="@drawable/grid"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/btn_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/atta"
+            android:layout_marginLeft="200dp"
+            android:layout_toEndOf="@id/txt_popular"
+            android:background="@null"
+            android:src="@drawable/list"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txt_disc"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/listviewproduct"/>
+        <TextView
+            android:id="@+id/txt_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="19dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/breakss"
+            android:textSize="20sp"
+            android:fontFamily="@font/reg"
+            android:textColor="@color/gray"
+            android:layout_below="@+id/rv_product"/>
+    </RelativeLayout>
+
+</ScrollView>
