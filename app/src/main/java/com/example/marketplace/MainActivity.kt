@@ -19,30 +19,35 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
         edtEmail = findViewById(R.id.username)
         edtPassword = findViewById(R.id.password)
         btnLogin = findViewById(R.id.loginbutton)
-
         btnLogin.setOnClickListener(this)
 
+        val signup = findViewById<Button>(R.id.signupbutton)
+        signup.setOnClickListener{
+            val Intent = Intent(this,MoveActivity::class.java)
+            startActivity(Intent)
+        }
     }
 
     override fun onClick(v: View) {
         var emptyEmail: Boolean = false
         var emptyPassword: Boolean = false
 
-        if(edtEmail.text.toString().trim().isEmpty()){
+        if (edtEmail.text.toString().trim().isEmpty()) {
             edtEmail.error = "Username Tidak Boleh Kosong!"
             emptyEmail = true
         }
 
-        if(edtPassword.text.toString().trim().isEmpty()){
+        if (edtPassword.text.toString().trim().isEmpty()) {
             edtPassword.error = "Password Tidak Boleh Kosong"
             emptyPassword = true
         }
 
-        if(!emptyEmail && !emptyPassword){
+        if (!emptyEmail && !emptyPassword) {
             val dataReceived = Intent(this@MainActivity, MoveActivityWithData::class.java)
             val email = edtEmail.text.toString()
             dataReceived.putExtra("String", email)
             startActivity(dataReceived)
         }
+
+        }
     }
-}
